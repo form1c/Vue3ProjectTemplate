@@ -1,0 +1,114 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* App Container */
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Buttons */
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button.small {
+  padding: 0.3rem 0.75rem;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.nav-links a {
+  color: #4CAF50;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #45a049;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+  color: #4CAF50;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Vue 3 Emit */
+.vue3-emit {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vue3-emit p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #app {
+    padding: 1.5rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    margin: 0.5rem 1rem;
+  }
+
+  .content {
+    padding: 1.5rem;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+}

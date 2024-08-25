@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Consolidated all CSS imports into a single section -->
+    <link type="text/css" rel="stylesheet" href="css/index.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="vue/comp1.vue.css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="vue/comp2.vue.css" media="screen" />
+  </head>
+
+  <body>
+    <div id="app">
+      <p><i>{{ $t("welcome") }}</i></p>
+      <top-menu></top-menu>
+      <br />
+      <!-- Render the appropriate component based on the current route -->
+      <router-view></router-view>
+      <hr />
+      <div>
+        <!-- Use the custom Vue3 component -->
+        <vue3-emit name="Vue3EmitSender" @counterupdated="handleVue3Event"></vue3-emit>
+        <div style="display: flex; column-gap: 10px;">
+          <p>Event counter of the receiver:</p>
+          <p id="IdVue3ReceiverOutput">0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Consolidated all script imports into a single section 
+    <script type="text/javascript" src="assets/vue@3.4.37/vue.global.js"></script>
+    <script type="text/javascript" src="assets/vue-i18n@9.13.1/vue-i18n.global.js"></script>
+    <script type="text/javascript" src="assets/vue-router@4.4.3/vue-router.global.js"></script>
+    <script type="text/javascript" src="assets/vuex@4.1.0/vuex.global.js"></script> -->
+    <script type="text/javascript" src="https://unpkg.com/vue@3.4.37/dist/vue.global.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vue-i18n@9.13.1/dist/vue-i18n.global.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vue-router@4.4.3/dist/vue-router.global.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/vuex@4.1.0/dist/vuex.global.js"></script>
+
+    <script type="text/javascript" src="assets/tiny-loader/tiny-loader.js"></script>
+    <script type="text/javascript" src="assets/tiny-eventbus/tiny-eventbus.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="vue/top-menu.vue.js"></script>
+    <script type="text/javascript" src="vue/home.vue.js"></script>
+    <script type="text/javascript" src="vue/comp1.vue.js"></script>
+    <!-- vue/comp2.vue.js is loaded dynamically -->
+    <script type="text/javascript" src="vue/vue3-emit.vue.js"></script>
+  </body>
+</html>
